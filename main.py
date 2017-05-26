@@ -13,7 +13,3 @@ repo = g.get_user().get_repo(credential.repo_name)
 print('create issue...')
 issue = repo.create_issue('title', 'body')
 print('finish!')
-
-
-
-
