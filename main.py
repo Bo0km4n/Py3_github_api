@@ -6,7 +6,6 @@ user_name = input()
 print('Github password: ', end='')
 password = input()
 g = Github(user_name, password)
-
 print('Authentication OK')
 
 # Githubオブジェクトからリポジトリ名でリポジトリオブジェクトを作成
@@ -19,6 +18,5 @@ print('issue title: ', end='')
 issue_title = input()
 print('issue body: ', end='')
 issue_body = input()
-
 issue = repo.create_issue(issue_body, issue_title)
 print('issue created')
