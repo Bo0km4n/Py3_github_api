@@ -1,14 +1,24 @@
 from github import Github
-# ユーザー情報の入った.pyファイル
-import credential
 
 # Githubオブジェクトの作成
-g = Github(credential.user_name, credential.password)
+print('Github user_name: ', end='')
+user_name = input()
+print('Github password: ', end='')
+password = input()
+g = Github(user_name, password)
+
+print('Authentication OK')
 
 # Githubオブジェクトからリポジトリ名でリポジトリオブジェクトを作成
-repo = g.get_user().get_repo(credential.repo_name)
+print('Repository name: ', end='')
+repo_name = input()
+repo = g.get_user().get_repo(repo_name)
 
 # Repositoryオブジェクトからissueオブジェクトを作成と同時に投稿
-print('create issue...')
-issue = repo.create_issue('title', 'body')
-print('finish!')
+print('issue title: ', end='')
+issue_title = input()
+print('issue body: ', end='')
+issue_body = input()
+
+issue = repo.create_issue(issue_body, issue_title)
+print('issue created')
