@@ -1,5 +1,4 @@
 from github import Github
-from github.Repository import Repository
 # ユーザー情報の入った.pyファイル
 import credential
 
