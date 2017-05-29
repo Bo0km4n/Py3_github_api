@@ -1,5 +1,8 @@
 # github api issues
 
+### python version
+3.5.1
+
 ### import libarary
 `pip install PyGithub`
 
