@@ -9,8 +9,9 @@ password = input()
 # GitHubオブジェクトの作成
 g = Github(user_name, password)
 
+print('\n' + 20 * '#')
 print('Authentication OK')
-
+print(20 * '#' + '\n')
 # リポジトリ名を入力
 print('Repository name: ', end='')
 repo_name = input()
